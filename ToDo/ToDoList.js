@@ -9,7 +9,7 @@ app.use(express.json());
 const tasks = [];
 let taskIdCounter = 0;
 
-// Get all tasks
+
 app.get("/tasks", (req, res) => {
   res.json({
     tasks: tasks,
@@ -38,7 +38,7 @@ app.get("/tasks/:task_id", (req, res) => {
   });
 });
 
-// Create a new task
+
 app.post("/tasks", (req, res) => {
   const { title, description, status } = req.body;
 
@@ -117,7 +117,7 @@ app.delete("/tasks/:task_id", (req, res) => {
   });
 });
 
-// Start the server
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
